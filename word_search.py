@@ -34,7 +34,7 @@ def print_table_rich(df, columns):
     console.print(table)
     
 def main():
-    df = pd.read_csv("ecdict.csv", encoding="utf-8",comment ="#")
+    df = pd.read_csv("ecdict.csv", encoding="utf-8",comment ="#", low_memory=False)
     az_words = just_az_words(df)
     while True:
         inquery = input("Enter a pattern : ")
@@ -43,12 +43,16 @@ def main():
             break    
         matching_words_df = match_word(az_words, inquery)
         frq_words_df = frq_filtered_words(matching_words_df, 100)
-        showed_columns = ["word", "phonetic", "definition", "oxford", "tag", "bnc", "frq"]
+        showed_columns = ["word", "phonetic", "definition", "tag", "bnc", "frq"]
         aviailable_columns = [col for col in showed_columns if col in frq_words_df.columns]
-        print_table_rich(frq_words_df, aviailable_columns)
         word_count = len(frq_words_df["word"].unique())
-        if word_count >= 10:
-            print(f"匹配到的单词数目: {word_count}")
+        if word_count == 0:
+            print("未检索到单词。")
+        else:
+            print("检索到的单词有:", ", ".join(frq_words_df["word"].unique()))
+            print_table_rich(frq_words_df, aviailable_columns)
+            if word_count >= 5:
+                print(f"匹配到的单词数目: {word_count}")
 
 if __name__ == "__main__":
     main()
