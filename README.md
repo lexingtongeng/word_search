@@ -6,6 +6,11 @@
 本项目使用的 `ecdict.csv` 文件来自以下开源项目：[ecdict](https://github.com/skywind3000/ecdict)。  
 该项目遵循 MIT License，感谢原作者的贡献。
 
+## 数据文件
+本项目需要使用 `ecdict.csv` 文件，该文件可以从以下链接下载：
+[ecdict.csv 下载链接](https://github.com/skywind3000/ECDICT/blob/master/ecdict.csv)
+下载后，请将文件放置在项目根目录下。
+
 ## 功能
 - 支持正则表达式模式匹配
 - 按词频过滤单词
