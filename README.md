@@ -1,58 +1,107 @@
 # Word Search Tool
 
-这是一个基于 Python 的单词匹配和筛选工具，支持正则表达式模式匹配和高频词过滤，帮助用户更高效地记忆和学习单词。
+A flexible and efficient word search and vocabulary-learning tool for English learners. Built with Python, it supports regex-based word matching, pronunciation pattern discovery, and frequency-based filtering.
 
 ---
 
-## 演示
+## ✨ Features
 
-### 示例 1：形近单词记忆
-用户输入时用` `或者 `.`（空格或者英文句点） 表示不确定的字母（如 `.ail`），回车即可检索出高频单词的音标、英英释义、标签（如 GRE、IELTS 等）、英国国家语料库（BNC）和当代语料库（FRQ）。
-
-![形近单词演示](https://github.com/user-attachments/assets/b4378e07-8376-474b-b920-04ce8f508294)
-
-### 示例 2：比较发音规律
-此脚本支持多个位置挖空。例如，输入 `con....`，返回 54 个匹配单词，并展示其发音规律（如 `/kɒn/` 和 `/kәn/`）。
-
-![发音规律演示](https://github.com/user-attachments/assets/e4402d0c-457a-4cc7-a4bd-87c77a2f5ea6)
+- ⛏️ **Regex Pattern Matching**: Search words with patterns like `.ail` or `con....` to explore related vocabulary.
+- 🔍 **Pronunciation Support**: Displays IPA phonetics (British English), helps identify pronunciation patterns.
+- 🔢 **Frequency Filtering**: Filter by high-frequency vocabulary using BNC and COCA corpus data.
+- 🔹 **Exam Tags**: Identify if words are tagged for GRE, IELTS, etc.
+- 🕁️ **Side-by-side Word Grouping**: Easily compare minimal pairs or word families (e.g. *slap*, *slip*, *slop*).
+- 🌍 **English-English Definitions**: All definitions are monolingual to encourage immersive learning.
+- 🌟 **Rich Output**: Uses the `rich` library to present search results in a clean, colorful table format.
 
 ---
 
-## 数据来源
+## 🔹 Demo Screenshots
 
-本项目使用的 `ecdict.csv` 文件来自以下开源项目：[ecdict](https://github.com/skywind3000/ecdict)。  
-该项目遵循 MIT License，感谢原作者的贡献。
+### 1. Partial Spelling Match
+Search with placeholders (`.` or space) to discover related words.
+![partial](https://github.com/user-attachments/assets/b4378e07-8376-474b-b920-04ce8f508294)
 
----
+### 2. Pronunciation Pattern Analysis
+Visualize groups of words by onset pattern and vowel variation.
+![pattern](https://github.com/user-attachments/assets/e4402d0c-457a-4cc7-a4bd-87c77a2f5ea6)
 
-## 数据文件
-
-本项目需要使用 `ecdict.csv` 文件，该文件可以从以下链接下载：  
-[ecdict.csv 下载链接](https://github.com/skywind3000/ECDICT/blob/master/ecdict.csv)
-
-下载后，请将文件放置在项目根目录下。
-
----
-
-## 功能
-
-- 支持正则表达式模式匹配，灵活检索单词。
-- 按词频过滤单词，聚焦高频词汇。
-- 使用 Rich 库以表格形式美观地展示结果。
+### 3. Vowel Comparison (Minimal Pairs)
+Group words like `slap/slip/slop` to observe vowel changes.
+![minimal](https://github.com/user-attachments/assets/1d00653f-be1b-4bee-9985-b3b1c2148ee5)
 
 ---
 
-## 依赖
+## 📊 Data Source
 
-运行此项目需要以下 Python 库：
-- `pandas`
-- `rich`
+The project uses the [ecdict](https://github.com/skywind3000/ecdict) dataset, a free and open-source English-Chinese dictionary in CSV format. It includes:
+
+- Word spellings and British IPA phonetics
+- Definitions, example sentences, and exam tags (GRE, IELTS, etc.)
+- Word frequency data from BNC and COCA
+
+> This project respects the original MIT license of ECDICT.
 
 ---
 
-## 使用方法
+## 📦 Installation
 
-1. 确保 `ecdict.csv` 文件与脚本位于同一目录。
-2. 安装依赖：
-   ```bash
-   pip install pandas rich
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/word-search-tool.git
+cd word-search-tool
+```
+
+### 2. Install dependencies
+```bash
+pip install pandas rich
+```
+
+### 3. Download and place the dictionary data
+Download `ecdict.csv` from:
+https://github.com/skywind3000/ECDICT/blob/master/ecdict.csv
+
+Place the file into the project root directory.
+
+---
+
+## 🚀 Usage
+
+Run the script and input patterns to search:
+```bash
+python word_search.py
+```
+Then enter a pattern like:
+```
+con....
+.ail
+sl.p
+```
+You will see a colored table of matching words with phonetics, meanings, tags, and frequencies.
+
+---
+
+## 📊 Future Plans
+- [ ] Add command-line menu interface
+- [ ] Export results to Markdown or Excel
+- [ ] Add support for American IPA/KK phonetics
+- [ ] Interactive pronunciation audio playback (with support)
+
+---
+
+## 📍 License
+
+This project is licensed under the MIT License.
+Thanks to [skywind3000](https://github.com/skywind3000) for the ECDICT dataset.
+
+---
+
+## 🙏 Acknowledgments
+
+- [ecdict](https://github.com/skywind3000/ecdict) for the dictionary data
+- [TextBlob](https://textblob.readthedocs.io/) and [Rich](https://github.com/Textualize/rich) for inspiration and output enhancement
+
+---
+
+Happy word hunting! 🤖
+
