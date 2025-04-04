@@ -37,7 +37,7 @@ Group words like `slap/slip/slop` to observe vowel changes.
 The project uses the [ecdict](https://github.com/skywind3000/ecdict) dataset, a free and open-source English-Chinese dictionary in CSV format. It includes:
 
 - Word spellings and British IPA phonetics
-- Definitions, example sentences, and exam tags (GRE, IELTS, etc.)
+- Definitions, and exam tags (GRE, IELTS, etc.)
 - Word frequency data from BNC and COCA
 
 > This project respects the original MIT license of ECDICT.
@@ -81,14 +81,6 @@ You will see a colored table of matching words with phonetics, meanings, tags, a
 
 ---
 
-## 📊 Future Plans
-- [ ] Add command-line menu interface
-- [ ] Export results to Markdown or Excel
-- [ ] Add support for American IPA/KK phonetics
-- [ ] Interactive pronunciation audio playback (with support)
-
----
-
 ## 📍 License
 
 This project is licensed under the MIT License.
@@ -99,7 +91,7 @@ Thanks to [skywind3000](https://github.com/skywind3000) for the ECDICT dataset.
 ## 🙏 Acknowledgments
 
 - [ecdict](https://github.com/skywind3000/ecdict) for the dictionary data
-- [TextBlob](https://textblob.readthedocs.io/) and [Rich](https://github.com/Textualize/rich) for inspiration and output enhancement
+- [Rich](https://github.com/Textualize/rich) for output enhancement
 
 ---
 
