@@ -1,5 +1,5 @@
 
-```markdown
+
 # Word Search Tool
 
 A flexible and efficient word search and vocabulary-learning tool for English learners. Built with Python, it supports regex-based word matching, pronunciation pattern discovery, and frequency-based filtering.
