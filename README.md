@@ -49,7 +49,7 @@
 ### 1. 克隆仓库
 ```bash
 git clone https://github.com/lexingtongeng/word-search-tool.git
-cd word-search-tool
+cd word_search
 ```
 
 ### 2. 安装依赖
@@ -69,7 +69,7 @@ pip install pandas rich
 
 运行脚本并输入模式进行搜索：
 ```bash
-python word_search.py
+python3 word_search.py
 ```
 然后输入模式，如：
 ```
