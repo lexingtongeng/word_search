@@ -48,7 +48,7 @@
 
 ### 1. 克隆仓库
 ```bash
-git clone https://github.com/your-username/word-search-tool.git
+git clone https://github.com/lexingtongeng/word-search-tool.git
 cd word-search-tool
 ```
 
